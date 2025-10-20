@@ -29,15 +29,12 @@ body{
 
 /*Header-----------------------------------------------------------------------------------*/
 .header{
+    width: 100%;
     background-color: #dc0a6e;
     display: flex; 
     height: 150px;
     box-shadow: 0px 0px 10px rgb(143, 0, 74);
-}
-
-.CG_menu{
     font-size: 14px;
-    display: flex;
 }
 
 .pitchula{
@@ -51,14 +48,13 @@ body{
 }
 
 .menu{
-    display: flex;
     margin-top: 5%;
-    margin-left: 25%;
+    display: flex;
+    margin-left: auto;
 }
 
 .link{
     color: white;
-    width: auto;
     padding: 12px;
     font-size: 15px;
     font-weight: bold;
