@@ -12,7 +12,7 @@ body{
 
 .titulo{
     text-align: center;
-    width: 750px;
+    
     margin: auto;
     font-size: 30px;
     color: #db4a82;
@@ -46,8 +46,8 @@ body{
   background-color: #f9bad2;
   text-align: center;
   padding: 40px 20px;
-  border-bottom: solid 1px #dc0a6e ;
-  border-top: solid 1px #dc0a6e ;
+  border-bottom: solid 2px #dc0a6e ;
+  border-top: solid 2px #dc0a6e ;
 
 }
 
@@ -106,7 +106,7 @@ body{
   align-items: center;
   flex-wrap: wrap;
   gap: 100px 50px;
-  padding: 100px 50px;
+  padding: 70px 50px;
 }
 
 .equipe .card {
@@ -183,7 +183,7 @@ body{
 /* ===================== */
 
 #nossas-acoes {
-  background-color: #db6392;
+  background-color: #fabec3;
   padding: 50px 0;
   color: #fff;
   text-align: center;
