@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código de Garotas</title>
+    <link rel="icon" type="image/x-icon" href="Imagens/favicon-CG.png">
+    <link rel="stylesheet" href="CSS/contatos_css.css">
+</head>
+<body>
+<!-- Header-->
+<script src="Script/header.js"></script>
+
+<br><br>
+<!--Fale com o CG-->
+<main>
+    <div>
+        <h1>Fale com o Código!</h1>
+       </div>
+       <div>
+            <section class="form-container"></section> 
+            <!--Forms-->
+                <form id="form" onsubmit="return FormValidado()">
+                    <label for="name">Nome Completo:</label>
+                    <input type="text" id="name" required>
+                
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+    
+                    <label for="number">Telefone:</label>
+                    <input type="tel" id="number" required>
+    
+                    <label for="topic">Assunto:</label>
+                    <select name="topic" id="topic" required>
+                        <option value="">Selecione o assunto do seu comentario</option>
+                        <option value="duvida">Duvidas</option>
+                        <option value="participar">Quero participar</option>
+                        <option value="Feedback">Feedback</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+    
+                    <label for="message">Mensagem:</label>
+                    <textarea name="message" id="message" required></textarea>
+    
+                    <button type="submit">Enviar</button>
+                </form>
+            </section> 
+        </div><br>
+        <!--Infos Extras-->
+        <div id="infos-extra">
+            <br><br><h1>Informações de contato:</h1>
+            <div id="ad">
+                <h2 id="extra">Endereço:</h2><br>
+                <p id="info">R. Roberto Símonsen, 305 - Centro Educacional, Pres. Prudente - SP, 19060-900</p><br><br>
+                <h2 id="extra">E-mail:</h2><br>
+                <p id="info">codigodegarota@gmail.com</p><br><br>
+                <h2 id="extar">Redes sociais:</h2><br>
+                <div class="footer-social">
+                    <a class="link-logos" href="https://www.tiktok.com/@codigodegarotas?_t=8s5ID22qWfN&_r=1" target="_blank">
+                      <img class="logos-footer" src="Imagens/Tiktok.png" alt="Tiktok">
+                    </a>
+                    <a class="link-logos" href="https://www.instagram.com/codigodegarotas?igsh=MXRyb2M3NGY0cHhzZQ==" target="_blank">
+                      <img class="logos-footer" src="Imagens/InstaGRAM.png" alt="Instagram"><br>
+                    </a>
+                  </div>
+            </div>
+        </div><br><br>
+        <!--Mapa-->
+    <h2 id="extra">Onde nos escontrar:</h2>
+      <section class="map-container">
+         <div id="map" class="map">
+            <iframe 
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-51.39623460769651%2C-22.124266460343885%2C-51.391872405052185%2C-22.122487755217705&layer=mapnik" 
+                width="100%" 
+                height="400px" 
+                style="border: 1.5px solid #ccc;">
+            </iframe>
+        </div>
+    </section>
+    </main><br>
+    <!--Footer-->
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-content">
+            <p>&copy; 2024 Código de Garotas. Todos os direitos reservados.</p>
+          </div>
+          <div class="footer-social">
+            <a class="link-logos" href="https://www.tiktok.com/@codigodegarotas?_t=8s5ID22qWfN&_r=1" target="_blank">
+                <img class="logos-footer" src="Imagens/Tiktok_alt.png" alt="Tiktok">
+              </a>
+              <a class="link-logos" href="https://www.instagram.com/codigodegarotas?igsh=MXRyb2M3NGY0cHhzZQ==" target="_blank">
+                <img class="logos-footer" src="Imagens/Insta.png" alt="Instagram">
+              </a>
+          </div>
+        </div>
+      </footer>
+</body>
+    <script src="Script/forms_CG.js"></script>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código de Garotas</title>
+    <link rel="icon" type="image/x-icon" href="Imagens/favicon-CG.png">
+    <link rel="stylesheet" href="CSS/CSSMainCG.css">
+</head>
+<body>
+<!-- Header-->
+<script src="Script/header.js"></script>
+
+<br><br>
+    <!-- Div que envolve o carrossel de imagens -->
+    <center><div class="slider">
+
+            <div class="slides">
+                <!--Radio Buttons-->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <!--Adicionando as imagens do nosso carrossel-->
+                <div class="slide first"> <!--First porque se trata do primeiro slide-->
+                    <img src="Imagens/carrossel1.png" alt="slide1">
+                </div>
+                <div class="slide">
+                    <img src="Imagens/carrossel2.png" alt="slide2">
+                </div>
+                <div class="slide">
+                    <img src="Imagens/carrossel3.png" alt="slide3">
+                </div>
+                <div class="slide">
+                    <img src="Imagens/carrossel4.png" alt="slide4">
+                </div>
+                <!--Bolinhas de Navegação automática-->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div> <!--Primeiro botão onde a pessoa pode clicar-->
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+            </div>
+           <!-- Navegação manual com labels que funcionam como botões para alternar entre os slides -->
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label> <!--Refere-se ao primeiro radio que criamos, que por sua vez refere-se ao primeiro slide-->
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+    </div></center><br><br>
+    <!--Texto da página inicial-->
+    <div>
+        <h1 class="Welcome_CG">CONHEÇA O CÓDIGO DE GAROTAS!</h1>
+        <br><br>
+        <p class="description"> Acreditamos que a diversidade é fundamental para a inovação e que o setor de tecnologia se beneficia enormemente com a contribuição de mulheres talentosas e inovadoras. Este site serve como plataforma para promover a inclusão e o crescimento de mulheres na área, fornecendo informações, recursos e oportunidades para que elas alcancem seu potencial máximo. Descubra a visão e o impacto do Código de Garotas neste espaço.</p>
+    </div><br><br>
+    <!--Footer-->
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-content">
+            <p>&copy; 2024 Código de Garotas. Todos os direitos reservados.</p>
+          </div>
+          <div class="footer-social">
+            <a class="link-logos" href="https://www.tiktok.com/@codigodegarotas?_t=8s5ID22qWfN&_r=1" target="_blank">
+                <img class="logos-footer" src="Imagens/Tiktok_alt.png" alt="Tiktok">
+              </a>
+              <a class="link-logos" href="https://www.instagram.com/codigodegarotas?igsh=MXRyb2M3NGY0cHhzZQ==" target="_blank">
+                <img class="logos-footer" src="Imagens/Insta.png" alt="Instagram">
+              </a>
+          </div>
+        </div>
+      </footer>
+</body>
+    <script src="Script/main.js"></script>
+</html>
