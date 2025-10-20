@@ -1,496 +1,323 @@
 
-
-
-body{
-    background-color: #fbdbda;
+body {
+  background-color: #fbdbda;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.titulo{
-    text-align: center;
-    width: 750px;
-    margin: auto;
-    font-size: 30px;
-    color: #db4a82;
-    font-weight: bold;
-}
-.container{
-    width: 80%; /* Largura ajustada para deixar uma margem */
-    max-width: 900px; /* Limite de largura */
-    margin: auto; /* Centraliza a div na página */
-    padding: 20px;
-    background-color: #fff;
+.titulo {
+  text-align: center;
+  max-width: 90%;
+  width: 750px;
+  margin: auto;
+  font-size: 30px;
+  color: #db4a82;
+  font-weight: bold;
 }
 
-/*Texto dentro do parágrafo*/
-#galeria  {
-    background-color: #f9bad2;
-   text-align: justify; /*Deixa o texto justificado*/
-   display: flex; /*Deixa as imagens uma do lado da outra*/
-    flex-wrap: wrap; /* Faz os itens quebrarem para a linha seguinte se não caberem */
-    justify-content: center; /*Centraliza os itens*/
-    gap:20px; /* Espaço de 20px entre os itens */
+.description {
+  text-align: center;
+  max-width: 90%;
+  width: 650px;
+  margin: 20px auto;
+  font-size: 20px;
+  color: rgb(143, 0, 74);
 }
 
-/*Estilo para o segundo parágrafo*/
-#galeria h2{
-    font-size: 20;
-   color:  #db4a82;
-   text-align: center;
-   margin: 20px auto; /*Margem de 20px em cima e embaixo*/
+.container {
+  width: 80%;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
 }
 
-.description{
-    text-align: center;
-    width: 650px;
-    margin: auto;
-    font-size: 20px;
-    color: rgb(143, 0, 74);
+/* ===================== */
+/* 🖼️ GALERIA */
+/* ===================== */
+
+#galeria {
+  background-color: #f9bad2;
+  text-align: center;
+  padding: 40px 20px;
 }
 
-/*Estilos para cada coluna da galeria*/
-.col{
-    padding: 10px 40px; /*Margem interna para cima e para baixo de 10px e para a esquerda e para a direita de 40 px*/
-}
-/*Cartões de imagens*/
-.card_galeria{
-    padding: 0; /*Nada de margem interna*/
-}
-.card_galeria img{ /*Mexe na imagem que está dentro do card*/
-    width: 180px; 
-    height: auto; /*Altura é automática para manter a proporção*/
-    display: block; /*A tag img sai do seu padrão de display inline*/
-    border-radius: 12px;
-    transition: all 0.3s linear; /*Transição linear na imagem dentro do card*/
-}
-.card_galeria h4{ /*Vamos mexer nos títulos abaixo das imagens*/
-    color: #db6392;
-    font-size: 16px;
-    text-shadow: 0.2px 0.2px 0.2px  #dc0a6e; /*Sombra no texto*/
-    text-align: center;
-}
-.card_galeria img:hover{ /*O estilo que somente será aplicado quando o ponteiro do mouse estiver em cima deste elemento*/
-      box-shadow: 0 0 8px rgb(255, 157, 173); /*Aplica uma sombra na imagem*/
-      scale: 1.7; /*Zoom*/
+#galeria h2 {
+  font-size: 22px;
+  color: #db4a82;
+  margin-bottom: 20px;
 }
 
-/*participantes cg*/
-
-.equipe{
-display: flex;
-justify-content: center;
-align-items: center;
-flex-wrap: wrap;
-gap: 100px 50px;
-padding: 100px 50px;
+.description {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 18px;
+  color: rgb(143, 0, 74);
+  text-align: justify;
 }
 
-.equipe .card{
-position: relative;
-display: flex;
-justify-content: center;
-align-items: flex-start;
-width: 280px;
-height: 300px;
-border-radius: 20px;
-box-shadow: 0 35px 80px rgba(0,0,0,0.15);
-background-color: #99B2E8;
-transition: 1.5s;
+.galeria-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
-.equipe .card:hover{
-height: 300px;
+.card_galeria {
+  text-align: center;
+  width: 200px;
 }
 
-.equipe .card .img{
-    position: absolute;
-    top:20px;
-    width: 200px;
-    height: 200px;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: .5s;
+.card_galeria img {
+  width: 100%;
+  border-radius: 12px;
+  transition: all 0.3s ease;
 }
 
-.equipe .card .img img{
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100;
-    height: 100%;
-    object-fit: cover;
-
+.card_galeria h4 {
+  color: #db6392;
+  font-size: 16px;
+  margin-top: 10px;
+  text-shadow: 0.2px 0.2px 0.2px #dc0a6e;
 }
 
-.equipe .card .conteudo{
-position: absolute;
-top: 230px;
-width: 100%;
-height: 45px;
-padding: 0 30px;
-overflow: hidden;
-text-align: center;
-transition: .5s;
+.card_galeria img:hover {
+  box-shadow: 0 0 8px rgb(255, 157, 173);
+  transform: scale(1.1);
 }
 
-.equipe .card:hover .img{
-    top: -100px;
-    scale: .75;
-    box-shadow: 0 15px 45px rgba(0,0,0,0.2);
+
+/* ===================== */
+/* 👩‍💻 EQUIPE */
+/* ===================== */
+
+.equipe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px 50px;
+  padding: 100px 50px;
 }
 
-.equipe .card:hover .conteudo{
-    top: 100px;  
-    height: 230px;  
+.equipe .card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 280px;
+  height: 300px;
+  border-radius: 20px;
+  background-color: #99b2e8;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
 }
 
-.equipe .card .conteudo h2{
-    font-size: 1.7rem;
-    font-weight: 700;
-    line-height: 1rem;
-    color: #35424a;
+.equipe .card:hover {
+  height: 400px;
 }
 
-.equipe .card .conteudo p{
-     font-size: 1.1rem;
-    text-align: center;
+.equipe .card .img {
+  position: absolute;
+  top: 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.4s ease;
 }
 
-#nossas-acoes{
-    background-color: #db6392;
-    padding-bottom: 50px; /*Padding na parte inferior*/
+.equipe .card .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-#nossas-acoes h2{
-   color:white;
-   text-align: center;
-   padding-top: 50px; /*Padding no topo de 50px*/
-   font-size: 30px;
-}
-#nossas-acoes p{
-   color:#fff;
-   text-align: center;
-   font-size: 20px;
-}
-/*Estilos para a grid de ações*/
-.grid-one-content{
-    min-height: 300px; /*Ajusta a altura mínima da div*/
-}
-/*Estilos para a grid de conteúdo*/
-.grid{ 
-   display: grid; /*Exibe os itens da grid*/
-   grid-template-columns: 1fr 1fr; /*Criando duas colunas*/
-   gap: 40px; /*Espaçamento entre as colunas*/
-   counter-reset: grid-counter; /*Criando um contador*/
-}
-.grid h3{
-   font-size: 20px;
-   position: relative; /*Importante para que o contador fique junto com o título*/
-   padding-left: 90px; /*Afasta o título do lado esquerdo da página*/
-   color:white;
-   text-decoration: underline;
-}
-.grid h3::before{ /*colocamos before pois  o número virá antes do título*/
-   counter-increment: grid-counter; /*Incrementa o contador que foi criado anteriormente*/
-   content: counter(grid-counter); /* Exibe o contador */
-   position: absolute; /* Posiciona de forma absoluta */
-   font-size: 50px;
-   font-style: italic;
-   top: -1.2rem; /* Posiciona o número para cima */
-   left: 1.5rem; /* Posiciona o número à esquerda */
-   transform: rotate(5deg); /*Número rotaciona*/
-   color:white
+.equipe .card .conteudo {
+  position: absolute;
+  top: 260px;
+  width: 100%;
+  height: 45px;
+  padding: 0 30px;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.4s ease;
 }
 
-/*Estilos para o texto dentro da grid*/
-.grid p{
-
-   line-height: 200%; /* Aumenta o espaçamento entre as linhas */
-   text-align: justify; /*Justifica o texto*/
-   margin-left: 50px;
-   margin-right: 50px;
-   font-size: 19.2px;
-
+.equipe .card:hover .img {
+  top: -100px;
+  transform: scale(0.75);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
 }
 
-/*Estilos para o mapa*/
-#map-box{
-    width: 70%; /*Largura ocupa toda a página*/
-    height: 500px;
-    margin:0 auto; /*Centraliza o mapa*/
-    border: 2px solid #db6392; /*Coloca uma borda no mapa*/
-    border-radius: 10px; /*Arredonda a borda*/
-    box-shadow: 0 0 8px rgb(255, 157, 173); /*Aplica uma sombra na imagem*/
+.equipe .card:hover .conteudo {
+  top: 100px;
+  height: 230px;
 }
 
-/*Estilização no iframe*/
-#map-box iframe{
+.equipe .card .conteudo h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1rem;
+  color: #35424a;
+}
+
+.equipe .card .conteudo p {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* ===================== */
+/* 💖 NOSSAS AÇÕES */
+/* ===================== */
+
+#nossas-acoes {
+  background-color: #db6392;
+  padding: 50px 0;
+  color: #fff;
+  text-align: center;
+}
+
+#nossas-acoes h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+#nossas-acoes p {
+  font-size: 20px;
+  margin: 0 auto 40px;
+  max-width: 800px;
+}
+
+/* GRID DE CONTEÚDO */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  counter-reset: grid-counter;
+  padding: 0 50px;
+}
+
+.grid h3 {
+  font-size: 20px;
+  position: relative;
+  padding-left: 90px;
+  text-decoration: underline;
+}
+
+.grid h3::before {
+  counter-increment: grid-counter;
+  content: counter(grid-counter);
+  position: absolute;
+  font-size: 50px;
+  font-style: italic;
+  top: -1.2rem;
+  left: 1.5rem;
+  transform: rotate(5deg);
+  color: #fff;
+}
+
+.grid p {
+  line-height: 200%;
+  text-align: justify;
+  font-size: 19px;
+  margin: 0 50px;
+}
+
+/* ===================== */
+/* 🗺️ MAPA */
+/* ===================== */
+
+#map-box {
+  width: 70%;
+  height: 500px;
+  margin: 0 auto;
+  border: 2px solid #db6392;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgb(255, 157, 173);
+  transition: box-shadow 0.3s ease;
+}
+
+#map-box:hover {
+  box-shadow: 0 0 15px rgba(219, 74, 130, 0.6);
+}
+
+#map-box iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* ===================== */
+/* 📱 RESPONSIVIDADE */
+/* ===================== */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .card_galeria img {
     width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-
-/*Ajustando a responsividade*/
-
-/*Tablets*/
-@media(max-width: 768px){
-
-    .container {
-
-        width: 95%;
-        padding: 10px;
-    }
-
-    .texto {
-
-        font-size: 16px; /*Ajusta o tamanho da fonte em telas pequenas*/
-    }
-
-    #galeria {
-
-        flex-direction:row; /*Exibe as imagens da galeria em linha*/
-        align-items: center;
-
-    }
-
-    .card_galeria img {
-
-        width: 100%; /* Ajusta a largura da imagem para 100% em telas menores */
-        max-width: 250px; /* Limita a largura máxima em telas pequenas */
-    
-    }
-
-    table {
-
-        width: 100%; 
-        margin: 0 auto; /* Centraliza a tabela horizontalmente */
-    
-    }
-
-    td img {
-
-        max-width: 100px;
-    
-    }
-
-    .grid {
-
-        grid-template-columns: 1fr; /* Reduz para 1 coluna em telas menores */
-        gap: 15px; /* Reduz o espaçamento entre os itens */
-
-    }
-
-    .grid h3 {
-
-        font-size: 18px; /* Ajusta o tamanho da fonte do título */
-
-    }
-
-    #nossas-acoes p{
-
-        font-size: 16px;
-
-    }
-
-    .grid p {
-
-        font-size: 16px; /* Ajusta o tamanho da fonte do texto */
-
-    }
-
-
-    #map-box {
-
-        width: 90%; 
-        height: 400px; 
-    
-    }
-
-}
-/*Celular*/
-@media (max-width: 480px) {
-
-    .container {
-
-        width: 100%;
-        padding: 20px;
-
-    }
-
-    .texto {
-
-        font-size: 14.4px; /* Reduz o tamanho da fonte para telas menores */
-
-    }
-
-    .card_galeria img {
-
-        width: 100%; /* Imagens ocupam toda a largura */
-        max-width: 200px; /* Limita a largura máxima em telas pequenas */
-
-    }
-
-    table {
-
-        font-size: 14px; /* Ajusta o tamanho da fonte nas tabelas */
-    
-    }
-
-    .grid {
-        grid-template-columns: 1fr; /* Reduz para 1 coluna em telas menores */
-        gap: 15px; /* Reduz o espaçamento entre os itens */
-    }
-
-    .grid h3 {
-        font-size: 16px; /* Ajusta o tamanho da fonte do título */
-    }
-
-    #nossas-acoes p{
-
-        font-size: 15px;
-        padding: 5px;
-    }
-
-    .grid p {
-
-        font-size: 15px; /* Ajusta o tamanho da fonte do texto */
-
-    }
-
-    #map-box {
-
-        width: 80%; /* Ajusta a largura do mapa para 90% em telas pequenas */
-        height: 300px; /* Ajusta a altura para não ocupar tanto espaço em telas menores */
-    
-    }
-}
-/*Desktop*/
-@media(max-width: 1024px){
-
-    .container {
-
-        width: 95%;
-        padding: 5px;
-    
-    }
-
-    .texto {
-
-        font-size: 18px; /* Ajusta o tamanho da fonte em telas pequenas */
-
-    }
-
-    #galeria {
-
-        flex-direction:row;
-        align-items: center;
-
-    }
-
-    .card_galeria img {
-
-        width: 100%; /* Ajusta a largura da imagem para 100% em telas menores */
-        max-width: 250px; /* Limita a largura máxima em telas pequenas */
-    
-    }
-
-    table {
-
-        width: 100%; /* Define a largura da tabela como 90% da largura da tela */
-        margin: 0 auto; /* Centraliza a tabela horizontalmente */
-    
-    }
-
-    td img {
-
-        max-width: 100px; /* Ajusta a largura das imagens para 100% em telas pequenas */
-    
-    }
-    .grid {
-
-        grid-template-columns: 1fr; /* Reduz para 1 coluna em telas menores */
-        gap: 15px; /* Reduz o espaçamento entre os itens */
-        
-    }
-    .grid h3 {
-
-        font-size: 20px; /* Ajusta o tamanho da fonte do título */
-   
-    }
-    #nossas-acoes p{
-
-        font-size: 18px;
-
-    }
-    .grid p {
-
-        font-size: 18px; /* Ajusta o tamanho da fonte do texto */
-
-    }
-    #map-box {
-
-        width: 90%; /* Ajusta a largura do mapa para 90% em telas pequenas */
-        height: 450px; /* Ajusta a altura para não ocupar tanto espaço em telas menores */
-    
-    }
-}
-    
-/*Footer*/
-.footer {
-    background-color: #dc0a6e;
-    color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.4);
+    max-width: 250px;
   }
-  
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .grid p {
+    font-size: 16px;
+  }
+
+  #nossas-acoes p {
+    font-size: 16px;
+  }
+
+  #map-box {
+    width: 90%;
+    height: 400px;
+  }
+
   .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .footer-content p {
-    margin: 0;
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .footer-social {
-    display: flex;
+    flex-direction: column;
     gap: 10px;
   }
+}
 
-  .rata_footer{
-    width: 100%;
-    max-width: 65px;
-  }
-  
-  .link-logos{
-    display: inline-block;
-  }
-  
-  .logos-footer{
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s ease;
-  }
-  
-  .footer-social img:hover {
-    transform: scale(1.2);
-  }
-  
-  @media (max-width: 768px) {
-    .footer-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .footer-content {
-      margin-bottom: 15px;
-    }
+/* Celular */
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 24px;
   }
 
+  .description {
+    font-size: 16px;
+  }
+
+  .card_galeria img {
+    max-width: 200px;
+  }
+
+  #nossas-acoes h2 {
+    font-size: 24px;
+  }
+
+  #nossas-acoes p,
+  .grid p {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  #map-box {
+    width: 80%;
+    height: 300px;
+  }
+}
 
