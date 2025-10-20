@@ -506,22 +506,22 @@ select{
 
 
 button{
-
     padding: 12px;
     border: none;
     border-radius: 5px;
-    background-color: rgb(218, 34, 132);
-    color: aliceblue;
+    background-color: #db4a82;
+    color: white;
     font-size: 1.1rem;
     cursor: pointer;
     margin-top: 15px;
     transition: background-color 0.3s ease;
-    width: 100%;
-
+    width: 30%;
+    margin-left: 35%;
 }
 
 button:hover{
-    background-color: deeppink;
+    background-color: #dc0a6e;
+    color: #fbdbda;
 }
 
 iframe {
