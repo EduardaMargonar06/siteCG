@@ -1,16 +1,22 @@
+
 *{
     box-sizing: border-box;
     font-family: 'Agrandir Grand Heavy', sans-serif;
     margin: 0;
     padding: 0;
-    text-align: justify;
 }
 
-#titulo{
+body{
+    background-color: #fbdbda;
+}
 
+.titulo{
     text-align: center;
-    color:#db6392
-
+    width: 750px;
+    margin: auto;
+    font-size: 30px;
+    color: #db4a82;
+    font-weight: bold;
 }
 .container{
     width: 80%; /* Largura ajustada para deixar uma margem */
@@ -32,7 +38,7 @@
 
 /*Estilo para o segundo parágrafo*/
 #galeria h2{
-   color:  #ef5a93;
+   color:  #f13b93;
    text-align: center;
    margin: 20px auto; /*Margem de 20px em cima e embaixo*/
 }
