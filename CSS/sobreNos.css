@@ -6,106 +6,6 @@
     text-align: justify;
 }
 
-/*Header*/
-.header-site-CG{
-    background-color: #dc0a6e;
-    margin: 0;
-    padding: 30px;
-    display: flex; 
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.4);
-}
-
-.menu_topo_CG{
-    width: 100%;
-}
-
-.CG_menu{
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.logo_CG{
-    width: 75%;
-    max-width: 500px;
-    height: auto;
-}
-
-.menu_itens_CG{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.secao_menu_CG{
-    flex: 0 0 auto;
-
-}
-
-.secundario_menu_CG_1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-left: 0;
-}
-
-.secundario_link{
-    color: rgb(255, 255, 255);
-    padding: 10px 15px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    margin: 5px;
-    transition: transform 0.3s ease;
-}
-
-.secundario_link:hover{
-    color: #CCCCCC;
-    transform: scale(1.2);
-}
-
-/*Responsividade do header*/
-@media (max-width: 768px) {
-    .header-site-CG {
-        padding: 15px;
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-    }
-
-    .logo_CG {
-        width: 50%;
-        max-width: 150px;
-    }
-
-    .menu_topo_CG {
-        width: 100%;
-    }
-
-    .CG_menu {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .secundario_menu_CG_1 {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .secundario_link {
-        font-size: 12px;
-        padding: 5px 10px;
-    }
-}
-
 #titulo{
 
     text-align: center;
@@ -120,27 +20,23 @@
     background-color: #fff;
 }
 /*Texto dentro do parágrafo*/
-.texto {
+#galeria  {
+    background-color: #f9bad2;
    font-size: 19.2px;
-   color:black; 
    text-align: justify; /*Deixa o texto justificado*/
-   margin-bottom: 20px; /* Espaçamento abaixo do parágrafo */
-   line-height: 200%; /*Espaçamento entre linhas*/
-}
-
-/*Estilo para o segundo parágrafo*/
-h2{
-   color:  #db6392;
-   text-align: center;
-   margin: 20px auto; /*Margem de 20px em cima e embaixo*/
-}
-/*Galeria*/
-#galeria{
-    display: flex; /*Deixa as imagens uma do lado da outra*/
+   display: flex; /*Deixa as imagens uma do lado da outra*/
     flex-wrap: wrap; /* Faz os itens quebrarem para a linha seguinte se não caberem */
     justify-content: center; /*Centraliza os itens*/
     gap:20px; /* Espaço de 20px entre os itens */
 }
+
+/*Estilo para o segundo parágrafo*/
+#galeria h2{
+   color:  #ef5a93;
+   text-align: center;
+   margin: 20px auto; /*Margem de 20px em cima e embaixo*/
+}
+
 /*Estilos para cada coluna da galeria*/
 .col{
     padding: 10px 40px; /*Margem interna para cima e para baixo de 10px e para a esquerda e para a direita de 40 px*/
