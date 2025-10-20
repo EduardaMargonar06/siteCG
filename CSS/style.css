@@ -58,7 +58,7 @@ body{
 .menu{
     display: flex;
     margin-top: 30px;
-    margin-left: 10%;
+    margin-left: 25%;
 }
 
 .link{
@@ -69,6 +69,7 @@ body{
     font-weight: bold;
     transition: transform 0.3s ease;
     text-decoration: none;
+    text-align: center;
 }
 
 .link:hover{
