@@ -613,6 +613,7 @@ h1::before {
 label {
     display: inline-block;
     padding: 5px 10px;
+    margin-bottom: 7px;
 }
 
 label a {
