@@ -56,7 +56,7 @@ body{
   padding: 15px;
   background-color: #fabec3;
   box-shadow: 0 3px 20px rgba(86, 23, 78, 0.463);
-
+  border-radius: 5px;
 }
 
 #explicacao p {
