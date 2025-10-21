@@ -17,7 +17,6 @@ titulo - #db4a82
 body{
     background-color: #fbdbda;
     user-select: none; 
-    overflow: hidden;
 }
 
 .titulo{
