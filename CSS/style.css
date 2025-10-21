@@ -17,6 +17,7 @@ titulo - #db4a82
 body{
     background-color: #fbdbda;
     user-select: none; 
+    cursor: none;
 }
 
 .titulo{
@@ -44,7 +45,7 @@ body{
     height: 50px;    /* Altura da sua imagem */
     
     /* !! IMPORTANTE: Troque pela URL da sua foto !! */
-    background-image: url('https://placehold.co/50x50/FFF/333?text=EU'); 
+    background-image: url('../Imagens/mouse.png'); 
     background-size: cover;
     background-position: center;
     border-radius: 50%; /* Deixa a foto redonda, opcional */

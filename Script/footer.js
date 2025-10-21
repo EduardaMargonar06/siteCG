@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
     const linkCSS = document.createElement("link");
-    linkCSS.rel = "stylesheet";
-    linkCSS.href = "CSS/style.css";
     document.head.appendChild(linkCSS);
     const footerHTML = `
     <footer class="footer">
@@ -11,3 +9,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.body.insertAdjacentHTML("beforeend", footerHTML);
 });
+
