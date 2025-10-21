@@ -16,6 +16,8 @@ titulo - #db4a82
 
 body{
     background-color: #fbdbda;
+    user-select: none; 
+    overflow: hidden;
 }
 
 .titulo{
@@ -25,6 +27,96 @@ body{
     font-size: 30px;
     color: #db4a82;
     font-weight: bold;
+}
+/*cursor de brilhinhos -----------------------------------------------------------------------------------*/
+
+/* 2. Estiliza o nosso "falso cursor" (a foto) */
+#custom-cursor {
+    position: fixed; /* Fica fixo na tela, não rola com a página */
+    width: 50px;     /* Largura da sua imagem */
+    height: 50px;    /* Altura da sua imagem */
+    
+    /* !! IMPORTANTE: Troque pela URL da sua foto !! */
+    background-image: url('https://placehold.co/50x50/FFF/333?text=EU'); 
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%; /* Deixa a foto redonda, opcional */
+    
+    /* Centraliza a imagem no ponteiro real (remove se quiser que o canto superior esquerdo siga) */
+    transform: translate(-50%, -50%); 
+
+    /* Garante que o cursor não bloqueie cliques em links ou botões abaixo dele */
+    pointer-events: none; 
+    
+    z-index: 9999; /* Garante que ele fique em cima de tudo */
+    transition: transform 0.1s ease-out; /* Dá uma leve suavizada no movimento */
+    opacity: 0; /* Começa escondido, o JS vai mostrar */
+}
+
+/* 3. Estiliza os "brilinhos" */
+.sparkle {
+    position: fixed; /* Fixo na tela */
+    width: 10px;
+    height: 10px;
+    
+    /* Cor rosa! */
+    background-color: #ff69b4; /* Hot Pink */
+    box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4;
+
+    /* Formato de estrela (opcional, pode usar border-radius: 50% para bolinhas) */
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+
+    /* Importante para não bloquear cliques */
+    pointer-events: none; 
+    z-index: 9998; /* Abaixo do cursor, acima do resto */
+    
+    /* Define a animação */
+    animation: sparkle-animation 1s forwards;
+}
+
+/* 4. Define a animação dos brilhos */
+@keyframes sparkle-animation {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        /* O JS vai definir --x e --y para um movimento aleatório */
+        transform: translate(var(--x), var(--y)) scale(0);
+    }
+}
+
+/* ===================== */
+/* Apresentação do CG */
+/* ===================== */
+#explicacao {
+  display: flex;
+  align-items: center; /* alinha verticalmente o texto e a imagem */
+  justify-content: space-between; /* cria espaço entre texto e imagem */
+  border: solid 2px #dc0a6e;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 15px;
+  background-color: #fabec3;
+  box-shadow: 0 3px 20px rgba(86, 23, 78, 0.463);
+  border-radius: 5px;
+}
+
+#explicacao p {
+  flex: 1; /* faz o texto ocupar o espaço restante */
+  text-align: left; /* garante que o texto fique alinhado à esquerda */
+  margin: 0; /* remove margens padrão do parágrafo */
+  margin-left: 1%;
+  font-size: 20px;
+   color: rgb(116, 2, 42);
+}
+
+#explicacao img {
+  width: 390px;
+  height: 230px;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 /*Header-----------------------------------------------------------------------------------*/
