@@ -217,130 +217,113 @@ body{
 
 /*index-----------------------------------------------------------------------------------*/
 
-/*Slider*/
-.slider{
-    margin: 0 auto; /*Posiciona o carrossel de imagens no centro da tela*/
-    width: 1000px;
-    height: 500px;
-    overflow: hidden; /*Para que não apareça todas as imagens*/
-}
+/* ====== Slider ====== */
 
-.slides{ /*Possui os radios e os slides*/
-    width: 400%;
-    height: 400px;
-    display: flex; /*Usa flexbox para alinhar os slides horizontalmente*/
-}
-
-.slides input{ /*Ocultar os inputs de tipo radio*/
-
+.input {
     display: none;
-
 }
 
-.slide{ /*Ajustando as imagens*/
-    width: 25%;
-    position: relative; /*Permite que o slide tenha um posicionamento relativo para ajustar seu layout*/
-    transition: 2s; /*Deixa a mudança entre as imagens mais suave quando o JS for acionado.*/
+.slider {
+  margin: 0 auto;
+  width: 1000px;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
 }
 
-.slide img{ /*Ajustando cada um das imagens*/
-
-    width: 950px;
-
-}
-
-.manual-navigation{
-
-    position: absolute; /* Posiciona a navegação manual de forma absoluta dentro do slider*/
-    width: 550px;
-    margin-top: 60px; /*Move a navegação manual para cima em 40px*/
-    display: flex; /*Exibe os botões de navegação em linha*/
-    /*justify-content: center; /*Centraliza os botões de navegação manual*/
-    justify-content:flex-end; /* Alinha as bolinhas de navegação manual à direita*/
-    margin-left: 50px; /* Adiciona um espaço da borda direita */
-
-}
-
-.manual-btn{
-
-    border: 2px solid white;
-    padding: 5px; /*Adiciona um preenchimento de 5px aos botões*/
-    border-radius: 10px;
-    cursor: pointer; /*Muda o cursor para uma mãozinha ao passar por cima do botão*/
-    transition: 1s; /*Adiciona uma transição suave de 1 segundo ao botão*/
-
-}
-
-.manual-btn:not(:last-child){ /*Espaçamento dos botões - menos no último*/
-
-    margin-right: 60px;
-
+/* container que contém rádios + slides (os rádios ficam antes) */
+.slides {
+  width: 800%; /* 8 slides */
+  height: 100%;
+  display: flex;
 }
 
 
-.manual-btn:hover{ /*Muda a cor de fundo quando o botão é clicado*/
-    background-color: white;
+/* cada slide ocupa 1/8 = 12.5% */
+.slide {
+  width: 12.5%; /* 100 / 8 = 12.5% */
+  transition: margin-left 1s ease;
 }
 
-#radio1:checked ~.first{ /*Quando o primeiro botão estiver marcado, o primeiro slide aparece de maneira padrão*/
-    margin-left: 0;
+/* imagem cheia e responsiva dentro do slide */
+.slide img {
+  width: 1000px;       /* sua largura desejada */
+  height: 500px;       /* sua altura desejada */
+  object-fit: cover;
 }
 
-#radio2:checked ~.first{ /*Quando o segundo botão estiver marcado, o segundo slide aparece de maneira padrão*/
-    margin-left: -25%;
+/* ====== Movimento controlado pelos radios ======
+   Observação: os radios estão antes de .slides, por isso usamos
+   "#radioN:checked ~ .slides { margin-left: X }" para movimentar. */
+#radio1:checked ~ .first { margin-left: 0%; }
+#radio2:checked ~ .first { margin-left: -12.5%; }
+#radio3:checked ~ .first { margin-left: -25%; }
+#radio4:checked ~ .first { margin-left: -37.5%; }
+#radio5:checked ~ .first { margin-left: -50%; }
+#radio6:checked ~ .first { margin-left: -62.5%; }
+#radio7:checked ~ .first { margin-left: -75%; }
+#radio8:checked ~ .first { margin-left: -87.5%; }
+
+.navigation-auto,
+.manual-navigation {
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-#radio3:checked ~.first{ /*Quando o terceiro botão estiver marcado, o terceiro slide aparece de maneira padrão*/
-    margin-left: -50%;
+.navigation-auto div,
+.manual-btn {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgb(143, 0, 74);
+  border-radius: 50%;
+  background: transparent;
+  transition: 0.3s;
 }
 
-#radio4:checked ~.first{ /*Quando o quarto botão estiver marcado, o quarto slide aparece de maneira padrão*/
-    margin-left: -75%;
+/* os pontos são labels com tamanho fixo */
+.manual-navigation label {
+  display: inline-block;
+  border-radius: 50%;
+  margin-left: -11px;
+  gap: 25px;
+  border: 2px solid rgb(143, 0, 74);
+  background: transparent;       /* transparente por padrão */
+  cursor: pointer;  
+  transition: transform .15s ease, background .2s ease, box-shadow .15s ease;
 }
 
-.navigation-auto div{ /*Refere-se aos botões de navegação automáticos*/
-
-    border: 2px solid white;
-    padding: 5px; /* Adiciona um preenchimento de 5px aos botões de navegação automática */
-    border-radius: 10px;
-    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar por cima do botão */
-    transition: 1s; /* Adiciona uma transição suave de 1 segundo ao botão */
-
+.manual-btn {
+  cursor: pointer;
+  z-index: 2;
 }
 
-.navigation-auto{
-
-    position: absolute; /* Posiciona a navegação automática de forma absoluta dentro do slider */
-    width: 550px;
-    margin-top: 460px; /* Move a navegação automática para baixo */
-    display: flex;  /* Exibe os botões de navegação automática em linha */
-    /*justify-content: center; /* Centraliza os botões de navegação automática */
-    justify-content: flex-end; /* Alinha as bolinhas de navegação automática à direita*/
-    margin-left: 50px; /* Adiciona um espaço da borda direita */
-
+/* hover visual */
+.manual-btn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
 }
 
-.navigation-auto div:not(:last-child){
-
-    margin-right: 60px; /* Adiciona uma margem à direita de 40px, exceto no último botão */
-
+#radio1:checked ~ .navigation-auto .auto-btn1,
+#radio2:checked ~ .navigation-auto .auto-btn2,
+#radio3:checked ~ .navigation-auto .auto-btn3,
+#radio4:checked ~ .navigation-auto .auto-btn4,
+#radio5:checked ~ .navigation-auto .auto-btn5,
+#radio6:checked ~ .navigation-auto .auto-btn6,
+#radio7:checked ~ .navigation-auto .auto-btn7,
+#radio8:checked ~ .navigation-auto .auto-btn8 {
+  background: white;
+  transform: scale(1.1);
 }
 
-
-#radio1:checked ~.navigation-auto .auto-btn1{  /* Quando o primeiro botão de rádio é selecionado, o primeiro botão de navegação automática fica colorido */
-    background-color: white;
-}
-
-#radio2:checked ~.navigation-auto .auto-btn2{  /* Quando o segundo botão de rádio é selecionado, o segundo botão de navegação automática fica colorido */
-    background-color: white;
-}
-
-#radio3:checked ~.navigation-auto .auto-btn3{  /* Quando o terceiro botão de rádio é selecionado, o terceiro botão de navegação automática fica colorido */
-    background-color: white;
-}
-
-#radio4:checked ~.navigation-auto .auto-btn4{  /* Quando o quarto botão de rádio é selecionado, o quarto botão de navegação automática fica colorido */
-    background-color: white;
+/* pequena responsividade: se a tela for menor que o slider, ajusta a imagem e o contêiner */
+@media (max-width: 1050px) {
+  .slider { width: 90%; }
+  .slide img { width: 100%; height: auto; }
 }
 
 .description{
