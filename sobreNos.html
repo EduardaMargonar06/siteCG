@@ -15,30 +15,24 @@
 
         <h1 class="titulo">SOBRE NÓS</h1>
 
-        <br><br>
+        <br><br><br>
 
         <!--Seção que traz uma breve descrição do trabalho-->
-        <div class="container">
+        <div id="explicacao">
+                <p>
+                   O <b>Código de Garotas</b> é um <b>projeto de extensão</b> formado por <b>catorze graduandas</b> do <b>Bacharelado em Ciência da Computação</b> da <b>FCT–Unesp</b>, que busca promover a <b>equidade de gênero</b> por meio da <b>educação</b> e da <b>tecnologia</b>. O grupo reúne <b>estudantes com diferentes perfis e vivências</b>, unidas pelo propósito de incentivar a <b>presença feminina na computação</b> e inspirar outras mulheres a descobrirem o <b>potencial transformador</b> da área tecnológica.
+                </p>
 
-             <p>
-        
-                <!--Parágrafo que traz breve descrição do trabalho-->
-                <span class="texto">
-
-                   O Código de Garotas é um projeto de extensão criado por sete graduandas do Bacharel de Ciência da Computação da FCT-Unesp,
-                   que busca trazer equidade de gênero para a educação.
-
-                </span>
-
-             </p>
-
+                <img src="Imagens/grupoJuntp.png" alt="CG Juntas"> 
         </div>
-        <br><br>
+
+        
+        <br><br><br><br><br>
 
     <!-- Galeria de imagens do projeto -->
    <section id="galeria">
-  <h2>Mulheres à frente de um futuro tecnológico mais promissor</h2>
-
+  <h2 class="sub_titulo">Mulheres à frente de um futuro tecnológico mais promissor</h2>
+    <br><br>
   <p class="description">
     O projeto foi idealizado com base na filosofia de que todas as mulheres têm plena capacidade de atuar
     no campo tecnológico, onde podem brilhar e desempenhar um papel essencial na transformação do mundo.
@@ -70,7 +64,7 @@
     <br>
 <div id="participantes">
     <br> <br><br>
-    <h2 class="titulo">Conheça nossa equipe</h2><br>
+    <h2 class="sub_titulo">Conheça nossa equipe</h2><br><br>
         <p class="description">
             Para atingir sua máxima, o Código de Garotas conta com uma equipe diversificada, composta por jovens com 
                 interesses variados, evidenciando como a área de Ciência da Computação é um campo acolhedor 
@@ -97,7 +91,7 @@
                 </div>
                 
                 <div class="conteudo">
-                    <h2>Ana Clara </h2>
+                    <h2>Ana C. </h2>
                     <br>
                     <p>
                     <b>Idade:</b> 19 anos; <br><br>
@@ -275,10 +269,10 @@
             </div>
             <div class="card">
                 <div class="img">
-                    <img src="../siteCG/Imagens/Ratinha_CG.png" alt="Abigail">
+                    <img src="../siteCG/Imagens/Ratinha_participante.png" alt="Abigail">
                 </div>
                 <div class="conteudo">
-                    <h2>Pitchula Perfeita</h2>
+                    <h2>Pitchula</h2>
                     <br>
                      <p>
                     <b>Idade:</b> 1 ano; <br><br>
@@ -293,35 +287,34 @@
       <!-- Seção com informações sobre as ações do projeto -->
       <section id="nossas-acoes">
 
-        <h2>Nossas ações</h2>
+        <h2 class="sub_titulo" >Nossas ações</h2>
 
         <br>
 
-        <p>Descubra abaixo o plano de ações do Código de Garotas para atingir seus objetivos:</p>
+        <p class="description">Descubra abaixo o plano de ações do Código de Garotas para atingir seus objetivos:</p>
 
-        <br><br><br><br>
-
+        <br>
         <div class="grid-one-content"> <!--Criação  do contêiner para a grid-->
 
            <div class="grid">
 
             <!--Cada article representa uma ação do CG-->
-            <article>
-
-               <h3>Minicurso</h3>
+            <article class="quadrado">
+                <br><br>
+               <h3>1 -- Minicurso</h3>
 
                <br>
-
+                
                <p>O Código de Garotas promove um minicurso em escolas, voltado para estudantes do 8º e 9º ano, 
                 e do 1º e 2º do Ensino Médio, com o objetivo de introduzir as alunas ao mundo da Computação 
                 por meio do Python.</p>
 
             </article>
 
-            <article>
+            <article class="quadrado">
+                <br><br>
+                <h3>2 -- Eventos acadêmicos</h3>
                 
-                <h3>Eventos acadêmicos</h3>
-
                 <br>
 
                 <p>Incentivamos a participação das integrantes do CG em eventos científicos e de profissões 
@@ -330,9 +323,9 @@
 
             </article>
 
-            <article>
-
-                <h3>Divulgação do projeto</h3>
+            <article class="quadrado">
+                <br><br>
+                <h3>3 -- Divulgação do projeto</h3>
 
                 <br>
 
@@ -343,9 +336,9 @@
 
             </article>
 
-            <article>
-
-                <h3>Redes sociais</h3>
+            <article class="quadrado">
+                <br><br>
+                <h3>5 -- Redes sociais</h3>
 
                 <br>
 
@@ -361,8 +354,10 @@
         </div>
 
       </section>
-      <br><br>
-      <h2>Onde nos encontrar</h2>
+      <br><br><br>
+      
+      <section>
+      <h2 class="sub_titulo">Onde nos encontrar</h2>
       <br><br>
       <!-- Mapa interativo do local onde o projeto está localizado -->
       <div id="map-box">
@@ -370,7 +365,7 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3696.1184445529707!2d-51.40996203662472!3d-22.121459275951135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9493f43f0ff7f359%3A0x3ff5d10b95e4acbf!2sUnesp%20-%20Faculdade%20de%20Ci%C3%AAncias%20e%20Tecnologia%20(FCT)!5e0!3m2!1spt-BR!2sbr!4v1733612088961!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       
     </div>
-    
+    </section>
     <br><br><br>
 
     <footer class="footer">
