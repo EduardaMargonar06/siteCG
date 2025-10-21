@@ -12,14 +12,19 @@ body{
 
 .titulo{
     text-align: center;
-    
     margin: auto;
     font-size: 30px;
     color: #db4a82;
     font-weight: bold;
 }
 
-
+.sub_titulo{
+   text-align: center;
+    margin: auto;
+    font-size: 30px;
+    color: #db4a82;
+    font-weight: bold;
+}
 .description {
   text-align: center;
   max-width: 90%;
@@ -39,22 +44,48 @@ body{
 }
 
 /* ===================== */
+/* Apresentação do CG */
+/* ===================== */
+#explicacao {
+  display: flex;
+  align-items: center; /* alinha verticalmente o texto e a imagem */
+  justify-content: space-between; /* cria espaço entre texto e imagem */
+  border: solid 2px #dc0a6e;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 15px;
+  background-color: #fabec3;
+  box-shadow: 0 3px 20px rgba(86, 23, 78, 0.463);
+
+}
+
+#explicacao p {
+  flex: 1; /* faz o texto ocupar o espaço restante */
+  text-align: left; /* garante que o texto fique alinhado à esquerda */
+  margin: 0; /* remove margens padrão do parágrafo */
+  margin-left: 1%;
+  font-size: 20px;
+   color: rgb(116, 2, 42);
+}
+
+#explicacao img {
+  width: 390px;
+  height: 230px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* ===================== */
 /* 🖼️ GALERIA */
 /* ===================== */
 
 #galeria {
-  background-color: #f9bad2;
+  background-color: #fabec3;
   text-align: center;
   padding: 40px 20px;
   border-bottom: solid 2px #dc0a6e ;
   border-top: solid 2px #dc0a6e ;
 
-}
-
-#galeria h2 {
-  font-size: 25px;
-  color: #db4a82;
-  margin-bottom: 20px;
 }
 
 .description {
@@ -106,7 +137,7 @@ body{
   align-items: center;
   flex-wrap: wrap;
   gap: 100px 50px;
-  padding: 70px 50px;
+  padding: 80px 50px;
 }
 
 .equipe .card {
@@ -114,12 +145,13 @@ body{
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  width: 280px;
-  height: 320px;
+  width: 170px;
+  height: 230px;
   border-radius: 20px;
-  background-color: #99b2e8;
-  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+  background-color: #fabec3;
+  box-shadow: 0 8px 30px rgba(86, 23, 78, 0.332);
   transition: all 0.4s ease;
+  border: solid 2px #dc0a6e ;
 }
 
 .equipe .card:hover {
@@ -129,39 +161,40 @@ body{
 .equipe .card .img {
   position: absolute;
   top: 17px;
-  width: 200px;
-  height: 200px;
+  width: 130px;
+  height: 140px;
   border-radius: 12px;
   transition: all 0.4s ease;
+  border: solid 2px #dc0a6e ;
 }
 
 .equipe .card .img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 9px;
 }
 
 .equipe .card .conteudo {
   position: absolute;
-  top: 260px;
+  top: 180px;
   width: 100%;
   height: 30px;
-  padding: 0 30px;
+  padding: 0 20px;
   text-align: center;
   overflow: hidden;
   transition: all 0.4s ease;
-  
+  padding-top: 5px;
 }
 
 .equipe .card:hover .img {
-  top: -100px;
+  top: -95px;
   transform: scale(0.75);
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 45px rgba(255, 83, 218, 0.468);
 }
 
 .equipe .card:hover .conteudo {
-  top: 100px;
+  top: 40px;
   height: 230px;
 }
 
@@ -169,13 +202,14 @@ body{
   font-size: 1.7rem;
   font-weight: 700;
   line-height: 1rem;
-  color: #35424a;
+  color: #db4a82;
   padding: 1%;
 }
 
 .equipe .card .conteudo p {
   font-size: 1.1rem;
   text-align: center;
+  color:rgb(143, 0, 74);
 }
 
 /* ===================== */
@@ -187,12 +221,8 @@ body{
   padding: 50px 0;
   color: #fff;
   text-align: center;
-}
-
-#nossas-acoes h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
+  border-bottom: solid 2px #dc0a6e ;
+  border-top: solid 2px #dc0a6e ;
 }
 
 #nossas-acoes p {
@@ -207,26 +237,15 @@ body{
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   counter-reset: grid-counter;
-  padding: 0 50px;
+  padding: 0 50px;  
 }
 
 .grid h3 {
-  font-size: 20px;
+  font-size: 25px;
   position: relative;
-  padding-left: 90px;
   text-decoration: underline;
-}
-
-.grid h3::before {
-  counter-increment: grid-counter;
-  content: counter(grid-counter);
-  position: absolute;
-  font-size: 50px;
-  font-style: italic;
-  top: -1.2rem;
-  left: 1.5rem;
-  transform: rotate(5deg);
-  color: #fff;
+  color: #db4a82;
+  text-align: center;
 }
 
 .grid p {
@@ -234,6 +253,15 @@ body{
   text-align: justify;
   font-size: 19px;
   margin: 0 50px;
+  color: rgb(143, 0, 74);
+  text-align: center;
+}
+
+.quadrado{
+  border: solid 1px rgb(143, 0, 74);
+  box-shadow: 0 1px 20px rgba(143, 0, 74, 0.551);
+  background-color: #fbdbda;
+  border-radius: 5px;
 }
 
 /* ===================== */
@@ -312,10 +340,6 @@ body{
 
   .card_galeria img {
     max-width: 200px;
-  }
-
-  #nossas-acoes h2 {
-    font-size: 24px;
   }
 
   #nossas-acoes p,
