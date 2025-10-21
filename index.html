@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,66 +8,77 @@
     <link rel="icon" type="image/x-icon" href="Imagens/favicon-CG.png">
     <link rel="stylesheet" href="CSS/style.css">
 </head>
+
 <body>
-<!-- Header-->
-<script src="Script/header.js"></script>
+    <!-- Header-->
+    <script src="Script/header.js"></script>
 
-<br><br>
-<h1 class="titulo">CONHEÇA O CÓDIGO DE GAROTAS</h1>
+    <br><br>
+    <h1 class="titulo">CONHEÇA O CÓDIGO DE GAROTAS</h1>
 
-<br><br>
+    <br><br>
     <!-- Div que envolve o carrossel de imagens -->
-    <center><div class="slider">
+    <center>
+        <div class="slider">
+      <div class="slides">
+        <!-- Radio Buttons -->
+        <input class="input" type="radio" name="radio-btn" id="radio1" checked>
+        <input class="input" type="radio" name="radio-btn" id="radio2">
+        <input class="input" type="radio" name="radio-btn" id="radio3">
+        <input class="input" type="radio" name="radio-btn" id="radio4">
+        <input class="input" type="radio" name="radio-btn" id="radio5">
+        <input class="input" type="radio" name="radio-btn" id="radio6">
+        <input class="input" type="radio" name="radio-btn" id="radio7">
+        <input class="input" type="radio" name="radio-btn" id="radio8">
 
-            <div class="slides">
-                <!--Radio Buttons-->
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-                <input type="radio" name="radio-btn" id="radio4">
-                <!--Adicionando as imagens do nosso carrossel-->
-                <div class="slide first"> <!--First porque se trata do primeiro slide-->
-                    <img src="Imagens/carrossel1.png" alt="slide1">
-                </div>
-                <div class="slide">
-                    <img src="Imagens/carrossel2.png" alt="slide2">
-                </div>
-                <div class="slide">
-                    <img src="Imagens/carrossel3.png" alt="slide3">
-                </div>
-                <div class="slide">
-                    <img src="Imagens/carrossel4.png" alt="slide4">
-                </div>
-                <div class="slide">
-                    <img src="Imagens/carrossel5.jpg" alt="slide4">
-                </div>
-                <div class="slide">
-                    <img src="Imagens/carrossel.png" alt="slide4">
-                </div>
-                <!--Bolinhas de Navegação automática-->
-                <div class="navigation-auto">
-                    <div class="auto-btn1"></div> <!--Primeiro botão onde a pessoa pode clicar-->
-                    <div class="auto-btn2"></div>
-                    <div class="auto-btn3"></div>
-                    <div class="auto-btn4"></div>
-                </div>
-            </div>
-           <!-- Navegação manual com labels que funcionam como botões para alternar entre os slides -->
-            <div class="manual-navigation">
-                <label for="radio1" class="manual-btn"></label> <!--Refere-se ao primeiro radio que criamos, que por sua vez refere-se ao primeiro slide-->
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-                <label for="radio4" class="manual-btn"></label>
-            </div>
-    </div></center><br><br>
-    <!--Texto da página inicial-->
-        <p class="description"> Acreditamos que a diversidade é fundamental para a inovação e que o setor de tecnologia se beneficia enormemente
-             com a contribuição de mulheres talentosas e inovadoras. Este site serve como plataforma para promover a inclusão e o crescimento de 
-             mulheres na área, fornecendo informações, recursos e oportunidades para que elas alcancem seu potencial máximo. Descubra a visão e o 
-             impacto do Código de Garotas neste espaço.</p><br><br>
-    <!--Footer-->
-    <script src="Script/footer.js"></script>
+        <!-- Slides -->
+        <div class="slide first"><img src="Imagens/carrossel1.png" alt="1"></div>
+        <div class="slide"><img src="Imagens/carrossel2.png" alt="2"></div>
+        <div class="slide"><img src="Imagens/carrossel3.png" alt="3"></div>
+        <div class="slide"><img src="Imagens/carrossel4.png" alt="4"></div>
+        <div class="slide"><img src="Imagens/carrossel5.jpg" alt="5"></div>
+        <div class="slide"><img src="Imagens/carrossel6.png" alt="6"></div>
+        <div class="slide"><img src="Imagens/carrossel7.png" alt="7"></div>
+        <div class="slide"><img src="Imagens/carrossel8.png" alt="8"></div>
 
-</body>
+        <!-- Navegação automática -->
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+          <div class="auto-btn5"></div>
+          <div class="auto-btn6"></div>
+          <div class="auto-btn7"></div>
+          <div class="auto-btn8"></div>
+        </div>
+      </div>
+
+      <!-- Navegação manual -->
+      <div class="manual-navigation">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+        <label for="radio5" class="manual-btn"></label>
+        <label for="radio6" class="manual-btn"></label>
+        <label for="radio7" class="manual-btn"></label>
+        <label for="radio8" class="manual-btn"></label>
+      </div>
+    </div>
+        <br><br>
+        <!--Texto da página inicial-->
+        <p class="description"> Acreditamos que a diversidade é fundamental para a inovação e que o setor de
+            tecnologia se beneficia enormemente
+            com a contribuição de mulheres talentosas e inovadoras. Este site serve como plataforma para promover a
+            inclusão e o crescimento de
+            mulheres na área, fornecendo informações, recursos e oportunidades para que elas alcancem seu potencial
+            máximo. Descubra a visão e o
+            impacto do Código de Garotas neste espaço.</p><br><br>
+        <!--Footer-->
+        <script src="Script/footer.js"></script>
+    </center>
     <script src="Script/main.js"></script>
+</body>
+
 </html>
