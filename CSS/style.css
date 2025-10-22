@@ -412,6 +412,11 @@ cursor: none;
   padding: 80px 50px;
 }
 
+.equipe_2{
+    display: flex;
+    width: 100%;
+}
+
 .equipe .card {
   position: relative;
   display: flex;
