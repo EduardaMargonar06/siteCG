@@ -224,22 +224,28 @@ body {
 }
 
 .slides {
-  width: 800%; 
+  width: 800%; /* 8 slides */
   height: 100%;
   display: flex;
 }
 
+
+/* cada slide ocupa 1/8 = 12.5% */
 .slide {
-  width: 12.5%; 
+  width: 12.5%; /* 100 / 8 = 12.5% */
   transition: margin-left 1s ease;
 }
 
+/* imagem cheia e responsiva dentro do slide */
 .slide img {
-  width: 1000px;       
-  height: 500px;       
+  width: 1000px;       /* sua largura desejada */
+  height: 500px;       /* sua altura desejada */
   object-fit: cover;
 }
 
+/* ====== Movimento controlado pelos radios ======
+   Observação: os radios estão antes de .slides, por isso usamos
+   "#radioN:checked ~ .slides { margin-left: X }" para movimentar. */
 #radio1:checked ~ .first { margin-left: 0%; }
 #radio2:checked ~ .first { margin-left: -12.5%; }
 #radio3:checked ~ .first { margin-left: -25%; }
@@ -251,13 +257,13 @@ body {
 
 .navigation-auto,
 .manual-navigation {
-    position: absolute;
-    left: 50%;
-    bottom: 25px;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .navigation-auto div,
@@ -270,66 +276,44 @@ body {
   transition: 0.3s;
 }
 
+/* os pontos são labels com tamanho fixo */
 .manual-navigation label {
   display: inline-block;
   border-radius: 50%;
   margin-left: -11px;
   gap: 25px;
   border: 2px solid rgb(143, 0, 74);
-  background: transparent;       
+  background: transparent;       /* transparente por padrão */
   cursor: pointer;  
   transition: transform .15s ease, background .2s ease, box-shadow .15s ease;
 }
 
 .manual-btn {
-    height: 23px;
-    width: 14px;
-    border-radius: 50%;
-    background: transparent;
-    transition: 0.3s;
-    margin-bottom: -5px;
-    cursor: pointer;
-    z-index: 2;
+  cursor: pointer;
+  z-index: 2;
 }
 
+/* hover visual */
 .manual-btn:hover {
-    background-color: rgba(255, 255, 255, 0.4);
-    transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
 }
 
-.navigation-auto div {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: transparent;
-    transition: 0.3s;
-    margin-bottom: -5px;
+#radio1:checked ~ .navigation-auto .auto-btn1,
+#radio2:checked ~ .navigation-auto .auto-btn2,
+#radio3:checked ~ .navigation-auto .auto-btn3,
+#radio4:checked ~ .navigation-auto .auto-btn4,
+#radio5:checked ~ .navigation-auto .auto-btn5,
+#radio6:checked ~ .navigation-auto .auto-btn6,
+#radio7:checked ~ .navigation-auto .auto-btn7,
+#radio8:checked ~ .navigation-auto .auto-btn8 {
+  background: white;
+  transform: scale(1.1);
 }
 
-/* os pontos são labels com tamanho fixo */
-.manual-navigation label {
-    display: inline-block;
-    border-radius: 50%;
-    border: 3px solid rgb(143, 0, 74);
-    background: transparent;
-    cursor: pointer;
-    transition: transform .15s ease, background .2s ease, box-shadow .15s ease;
-}
-
-#radio1:checked~.navigation-auto .auto-btn1,
-#radio2:checked~.navigation-auto .auto-btn2,
-#radio3:checked~.navigation-auto .auto-btn3,
-#radio4:checked~.navigation-auto .auto-btn4,
-#radio5:checked~.navigation-auto .auto-btn5,
-#radio6:checked~.navigation-auto .auto-btn6,
-#radio7:checked~.navigation-auto .auto-btn7,
-#radio8:checked~.navigation-auto .auto-btn8 {
-    background: #fabec3;
-    transform: scale(1.1);
-}
-
+/* pequena responsividade: se a tela for menor que o slider, ajusta a imagem e o contêiner */
 @media (max-width: 1050px) {
-  /* .slider { width: 90%; } (Removido, pois agora é o padrão) */
+  .slider { width: 90%; }
   .slide img { width: 100%; height: auto; }
 }
 
