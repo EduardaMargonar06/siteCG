@@ -200,36 +200,48 @@ body {
 
 /*Responsividade do header*/
 @media (max-width: 768px) {
-    .header-site-CG {
-        padding: 15px;
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-    }
+    .header {
+        /* 1. Permite que os itens quebrem para a linha de baixo */
+        flex-wrap: wrap;
 
-    .logo_CG {
-        width: 50%;
-        max-width: 150px;
-    }
-
-    .menu_topo_CG {
-        width: 100%;
-    }
-
-    .CG_menu {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .secundario_menu_CG_1 {
+        /* 2. Centraliza as linhas horizontalmente */
         justify-content: center;
-    }
-}
 
-@media (max-width: 480px) {
-    .secundario_link {
-        font-size: 12px;
-        padding: 5px 10px;
+        /* 3. Remove a altura fixa para caber as duas linhas */
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .pitchula{
+      height: 150px;
+    }
+    /* 5. Reseta o espaçamento negativo do logo */
+    .logo {
+        margin-left: 0;
+        margin-top: 0;
+        height: 80px;
+    }
+    
+    .menu {
+        /* 6. Força o menu a ocupar 100% da largura, 
+           indo para a linha de baixo */
+        width: 100%;
+
+        /* 7. Reseta a margem que o empurrava para a direita */
+        margin-left: 0;
+
+        /* 8. Centraliza os links DENTRO do menu */
+        justify-content: center;
+
+        /* (Opcional) Se os links não couberem, eles quebram a linha também */
+        flex-wrap: wrap; 
+
+        margin-top: 15px; /* Espaço entre as logos e o menu */
+    }
+
+    .link {
+        /* Ajusta o padding para telas menores */
+        padding: 10px 15px;
     }
 }
 
