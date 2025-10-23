@@ -4,7 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const headerHTML = `
   <header class="header">
         <img src="Imagens/Ratinha_CG.png" class="pitchula">
-        <img class="logo" src="Imagens/CG-titulo.png" alt="Logo">
+        
+        <img class="logo logo-desktop" src="Imagens/CG-titulo.png" alt="Logo Código de Garotas">
+        
+        <img class="logo logo-mobile" src="Imagens/titulo_diminuida.png" alt="Logo Código de Garotas">
+        
         <nav class="menu">                        
             <a class="link" href="index.html">Início</a>                    
             <a class="link" href="sobreNos.html">Sobre nós</a>
@@ -17,5 +21,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.body.insertAdjacentHTML("afterbegin", headerHTML);
 });
-
-
