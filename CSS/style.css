@@ -23,7 +23,7 @@ body {
 
 .titulo {
     text-align: center;
-    width: 750px;
+    width: 90%;
     margin: auto;
     font-size: 30px;
     color: #db4a82;
@@ -138,7 +138,7 @@ body {
     color: rgb(116, 2, 42);
 }
 
-#explicacao img {
+.img1 {
     width: 390px;
     height: 230px;
     border-radius: 8px;
@@ -186,6 +186,14 @@ body {
     transform: scale(1.1);
 }
 
+.nav-menu {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+}
+
 /*Footer-----------------------------------------------------------------------------------*/
 .footer {
     background-color: #dc0a6e;
@@ -210,38 +218,76 @@ body {
         /* 3. Remove a altura fixa para caber as duas linhas */
         height: auto;
         padding: 15px 0;
+        display: flex;
     }
 
-    .pitchula{
-      height: 150px;
+    .pitchula {
+        height: 50px;
     }
+
     /* 5. Reseta o espaçamento negativo do logo */
     .logo {
-        margin-left: 0;
+        margin-left: 2%;
         margin-top: 0;
-        height: 80px;
+        height: 50px;
     }
-    
+
     .menu {
-        /* 6. Força o menu a ocupar 100% da largura, 
-           indo para a linha de baixo */
-        width: 100%;
-
-        /* 7. Reseta a margem que o empurrava para a direita */
-        margin-left: 0;
-
-        /* 8. Centraliza os links DENTRO do menu */
-        justify-content: center;
-
-        /* (Opcional) Se os links não couberem, eles quebram a linha também */
-        flex-wrap: wrap; 
-
-        margin-top: 15px; /* Espaço entre as logos e o menu */
+        display: none;
     }
 
-    .link {
-        /* Ajusta o padding para telas menores */
-        padding: 10px 15px;
+    .menu_resp ul {
+        flex-direction: column;
+        /* Alinha os itens na vertical */
+        display: none;
+        /* Esconde a lista por padrão */
+        background-color: #fabec3;
+        position: absolute;
+        top: 60px;
+        /* Alinhe a posição do menu expandido */
+        width: 25%;
+        right: 0;
+        z-index: 1;
+        border: solid 1px rgb(143, 0, 74);
+    }
+
+    .menu_resp li {
+        text-align: center;
+        list-style-type: none;
+    }
+
+    .menu_resp li a {
+        padding: 10px 0;
+        text-decoration: none;
+        color: rgb(143, 0, 74);
+    }
+
+    .menu_resp hr {
+        border: none;
+        height: 1px;
+        background-color: rgb(143, 0, 74);
+    }
+
+    /* Exibe o menu quando a classe "active" está presente */
+    .menu_resp ul.active {
+        display: flex;
+    }
+
+    /* Exibe o botão de toggle */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .menu-toggle img {
+        width: 200%;
+        margin-top: -7px;
     }
 }
 
@@ -332,8 +378,9 @@ body {
     justify-content: center;
     gap: 20px;
 }
+
 .navigation-auto,
-.manual-navigation label{
+.manual-navigation label {
     gap: 24px;
 }
 
@@ -389,6 +436,7 @@ body {
 @media (max-width: 1050px) {
     .slider {
         width: 90%;
+        height: 300px;
     }
 
     .slide img {
@@ -472,6 +520,10 @@ body {
 /* ===================== */
 /* 👩‍💻 EQUIPE */
 /* ===================== */
+
+.equipe_resp {
+    display: none;
+}
 
 .equipe {
     display: flex;
@@ -679,6 +731,112 @@ body {
         flex-direction: column;
         gap: 10px;
     }
+
+    #explicacao {
+        display: list-item;
+    }
+
+    .img1 {
+        display: none;
+    }
+
+    .equipe {
+        display: none;
+    }
+
+    .equipe_resp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px 5px;
+        padding: 8px 5px;
+    }
+
+    .equipe_2_resp {
+        display: flex;
+        width: 100%;
+        margin-top: 70px;
+    }
+
+    .equipe_resp .card {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45%;
+        height: 230px;
+        border-radius: 20px;
+        background-color: #fabec3;
+        box-shadow: 0 8px 30px rgba(86, 23, 78, 0.332);
+        transition: all 0.4s ease;
+        border: solid 2px #dc0a6e;
+        margin-left: 4.16%;
+    }
+
+    .equipe_resp .card:hover {
+        height: 250px;
+    }
+
+    .equipe_resp .card .img {
+        position: absolute;
+        top: 17px;
+        width: 130px;
+        height: 140px;
+        border-radius: 12px;
+        transition: all 0.4s ease;
+        border: solid 2px #dc0a6e;
+    }
+
+    .equipe_resp .card .img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 9px;
+    }
+
+    .equipe_resp .card .conteudo {
+        position: absolute;
+        top: 180px;
+        width: 100%;
+        height: 30px;
+        padding: 0 20px;
+        text-align: center;
+        overflow: hidden;
+        transition: all 0.4s ease;
+        padding-top: 5px;
+    }
+
+    .equipe_resp .card:hover .img {
+        top: -95px;
+        transform: scale(0.75);
+        box-shadow: 0 15px 45px rgba(255, 83, 218, 0.468);
+    }
+
+    .equipe_resp .card:hover .conteudo {
+        top: 40px;
+        height: 230px;
+    }
+
+    .equipe_resp .card .conteudo h2 {
+        font-size: 1.7rem;
+        font-weight: 700;
+        line-height: 1rem;
+        color: #db4a82;
+        padding: 1%;
+    }
+
+    .equipe_resp .card .conteudo p {
+        font-size: 1.1rem;
+        text-align: center;
+        color: rgb(143, 0, 74);
+    }
+
+    .equipe_2_resp {
+        width: 100%;
+        display: flex;
+    }
+
 }
 
 /* Celular */
@@ -705,6 +863,7 @@ body {
         width: 80%;
         height: 300px;
     }
+
 }
 
 /*Galeria----------------------------------------------------------------------------------*/
@@ -838,7 +997,7 @@ label a:hover {
 /*Mulheres na computação--------------------------------------------------------------------*/
 
 /* Estilo para telas maiores */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .h1_mulheres {
         font-size: 2.5rem;
         max-width: 750px;
@@ -849,6 +1008,24 @@ label a:hover {
         font-size: 1.2rem;
         max-width: 70%;
         /* Mantém o layout original em telas grandes */
+    }
+
+    .top-content {
+        background-color: #fabec3;
+        width: 70%;
+        margin: 0 auto 0px auto;
+        height: auto;
+        display: list-item;
+        align-items: center;
+        flex-direction: row;
+        border-radius: 5px;
+        border: solid 1px rgb(143, 0, 74);
+    }
+
+    .label {
+        display: inline-block;
+        padding: 5px 1 px;
+        margin-bottom: 7px;
     }
 }
 
@@ -996,7 +1173,11 @@ button:hover {
     gap: 30px;
 }
 
-infos-extra {
+#ad_resp {
+    display: none;
+}
+
+#infos-extra {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: large;
     color: rgb(143, 0, 74);
@@ -1047,7 +1228,31 @@ infos-extra {
 
     form {
         width: 90%;
+        margin-left: 5%;
     }
+
+    #ad {
+        display: none;
+    }
+
+    #ad_resp {
+        display: list-item;
+        text-align: center;
+        gap: 30px;
+        margin-top: -100px;
+    }
+
+    .card_contatos {
+        width: 350px;
+        height: 250px;
+        border: solid 2px rgb(143, 0, 74);
+        padding: 40px;
+        border-radius: 20px;
+        background-color: #fabec3;
+        transition: 0.5s;
+        margin-top: 15px;
+    }
+
 }
 
 @media (max-width: 480px) {
