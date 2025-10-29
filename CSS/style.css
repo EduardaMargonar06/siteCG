@@ -125,11 +125,8 @@ body {
 
 #explicacao img {
     max-width: 390px;
-    /* <-- CORRIGIDO */
     width: 100%;
-    /* <-- ADICIONADO */
     height: auto;
-    /* <-- ADICIONADO */
     border-radius: 8px;
     object-fit: cover;
 }
@@ -297,8 +294,6 @@ body {
         align-self: center;
     }
 
-    /* --- FIM DA MUDANÇA DO LOGO --- */
-
     .menu {
         width: 100%;
         margin-left: 0;
@@ -312,7 +307,7 @@ body {
     }
 }
 
-/*index-----------------------------------------------------------------------------------*/
+/*index---------------------------------------------------------------------------------------------------------*/
 
 .input {
     display: none;
@@ -321,9 +316,7 @@ body {
 .slider {
     margin: 0 auto;
     max-width: 1000px;
-    /* <-- CORRIGIDO */
     width: 90%;
-    /* <-- ADICIONADO */
     height: 500px;
     overflow: hidden;
     position: relative;
@@ -389,33 +382,30 @@ body {
     gap: 20px;
 }
 
-.navigation-auto,
+.navigation-auto {
+    gap: 24px;
+    margin-bottom: 7px;
+}
+
 .manual-navigation label {
     gap: 24px;
 }
 
-.navigation-auto div,
-.manual-btn {
-    width: 14px;
-    height: 14px;
-    border: 2px solid rgb(143, 0, 74);
+.navigation-auto div{
+    width: 21px;
+    height: 21px;
     border-radius: 50%;
     background: transparent;
     transition: 0.3s;
 }
 
-.manual-navigation label {
-    display: inline-block;
-    border-radius: 50%;
-    margin-left: -11px;
-    gap: 25px;
-    border: 2px solid rgb(143, 0, 74);
-    background: transparent;
-    cursor: pointer;
-    transition: transform .15s ease, background .2s ease, box-shadow .15s ease;
-}
-
 .manual-btn {
+    width: 14px;
+    height: 23px;
+    border: 3px solid rgb(143, 0, 74);
+    border-radius: 50%;
+    background: transparent;
+    transition: 0.3s;
     cursor: pointer;
     z-index: 2;
 }
@@ -433,17 +423,17 @@ body {
 #radio6:checked~.navigation-auto .auto-btn6,
 #radio7:checked~.navigation-auto .auto-btn7,
 #radio8:checked~.navigation-auto .auto-btn8 {
-    background: white;
+    background: #f9bad2;
     transform: scale(1.1);
 }
 
 .description {
-        text-align: center;
-        width: 90%;
-        margin: auto;
-        font-size: 20px;
-        color: rgb(143, 0, 74);
-    }
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    font-size: 20px;
+    color: rgb(143, 0, 74);
+}
 
 @media (max-width: 1050px) {
     .slider {
