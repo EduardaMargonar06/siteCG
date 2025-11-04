@@ -13,9 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
           <img class="logo" src="Imagens/CG-titulo.png" alt="Logo">
           <nav class="menu">                        
               <a class="link" href="index.html">Início</a>                    
-              <a class="link" href="sobreNos.html">Sobre nós</a>
+              <a class="link" href="sobreNos.html">Sobre Nós</a>
               <a class="link" href="galeria_cg.html">Mídia</a>
               <a class="link" href="CG_mulheres.html">Mulheres na Computação</a>
+              <a class="link" href="sobrecurso.html">Sobre o Curso</a>
               <a class="link" href="contatos_CG.html">Contatos</a>
           </nav>
 
@@ -28,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <li><a href="sobreNos.html">Sobre nós</a></li> <hr style="border:none; height:.5px; background-color:rgb(143, 0, 74);">
               <li><a href="galeria_cg.html">Mídia</a></li> <hr>
               <li><a href="CG_mulheres.html">Mulheres na Computação</a></li> <hr style="border:none; height:.5px; background-color:rgb(143, 0, 74);">
+               <li><a class="link" href="sobrecurso.html">Sobre o Curso</a></li>
               <li><a href="contatos_CG.html">Contatos</a></li>
             </ul>
           </nav>
