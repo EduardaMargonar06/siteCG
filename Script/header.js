@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
               <li><a href="sobreNos.html">Sobre nós</a></li> <hr style="border:none; height:.5px; background-color:rgb(143, 0, 74);">
               <li><a href="galeria_cg.html">Mídia</a></li> <hr>
               <li><a href="CG_mulheres.html">Mulheres na Computação</a></li> <hr style="border:none; height:.5px; background-color:rgb(143, 0, 74);">
-               <li><a class="link" href="sobrecurso.html">Sobre o Curso</a></li>
-              <li><a href="contatos_CG.html">Contatos</a></li>
+              <li><a href="sobrecurso.html">Sobre o Curso</a></li> <hr>
+              <li><a href="contatos_CG.html">Contatos</a></li> <hr style="border:none; height:.5px; background-color:rgb(143, 0, 74);"
             </ul>
           </nav>
     </header>
