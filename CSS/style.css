@@ -1266,6 +1266,48 @@ h2 {
     color: #db6392;
 }
 
+/*sobre o curso----------------------------------------------------------------------------------------------------------------*/
+.caracCurso{
+    display: flex;
+}
+.card_curso {
+    max-width: 170px;
+    width: 90%;
+    height: 125px;
+    border: solid 2px rgb(143, 0, 74);
+    padding: 23px;
+    border-radius: 20px;
+    background-color: #fabec3;
+    transition: 0.5s;
+    margin: 0 auto;
+  align-items: center;
+  text-align: center;
+}
+
+.card_curso:hover {
+    transform: scale(1.05);
+}
+
+.card_curso p {
+    color: rgb(143, 0, 74);
+    text-decoration: none;
+}
+
+#materias{
+  background-color: #fabec3;  
+  border-bottom: solid 2px #dc0a6e;
+    border-top: solid 2px #dc0a6e;
+    text-align: center;
+    align-items: center;
+}
+
+.cor{
+    background-color: #f39ac5;
+}
+.cor1{
+    background-color: #ff3a99;
+}
+
 /*Contatos---------------------------------------------------------------------------------------------------------------------*/
 
 main {
