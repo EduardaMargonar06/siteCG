@@ -496,21 +496,21 @@ body {
     }
 
     .navigation-auto {
-    gap: 24px;
-    margin-bottom: -5px;
-}
+        gap: 24px;
+        margin-bottom: -5px;
+    }
 
-.manual-btn {
-    width: 14px;
-    height: 23px;
-    border: 3px solid rgb(143, 0, 74);
-    border-radius: 50%;
-    background: transparent;
-    transition: 0.3s;
-    cursor: pointer;
-    z-index: 2;
-    margin-bottom: -7px;
-}
+    .manual-btn {
+        width: 14px;
+        height: 23px;
+        border: 3px solid rgb(143, 0, 74);
+        border-radius: 50%;
+        background: transparent;
+        transition: 0.3s;
+        cursor: pointer;
+        z-index: 2;
+        margin-bottom: -7px;
+    }
 
 }
 
@@ -914,7 +914,7 @@ body {
         margin-top: 20px;
     }
 
-    
+
 }
 
 /* Celular */
@@ -1266,9 +1266,10 @@ h2 {
 }
 
 /*sobre o curso----------------------------------------------------------------------------------------------------------------*/
-.caracCurso{
+.caracCurso {
     display: flex;
 }
+
 .card_curso {
     max-width: 170px;
     width: 90%;
@@ -1279,8 +1280,8 @@ h2 {
     background-color: #fabec3;
     transition: 0.5s;
     margin: 0 auto;
-  align-items: center;
-  text-align: center;
+    align-items: center;
+    text-align: center;
 }
 
 .card_curso:hover {
@@ -1292,19 +1293,53 @@ h2 {
     text-decoration: none;
 }
 
-#materias{
-  background-color: #fabec3;  
-  border-bottom: solid 2px #dc0a6e;
+#materias {
+    background-color: #fabec3;
+    border-bottom: solid 2px #dc0a6e;
     border-top: solid 2px #dc0a6e;
     text-align: center;
     align-items: center;
 }
 
-.cor{
-    background-color: #f39ac5;
+.cor {
+    background-color: #ffedf9;
 }
-.cor1{
-    background-color: #ff3a99;
+
+.cor1 {
+    background-color: #fbdbda;
+}
+
+.caracCurso_resp{
+    display: none;
+}
+
+/*responsividade do sobre o curso ----------------------------------------*/
+@media (max-width: 610px) {
+    .caracCurso {
+        display: none;
+    }
+
+    .caracCurso_resp{
+        display: flex;
+    }
+
+    .card_curso {
+        max-width: 170px;
+        width: 90%;
+        height: auto;
+        border: solid 2px rgb(143, 0, 74);
+        padding: 15px;
+        border-radius: 20px;
+        background-color: #fabec3;
+        transition: 0.5s;
+        margin: 0 auto;
+        text-align: center;
+        vertical-align: middle;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
 }
 
 /*Contatos---------------------------------------------------------------------------------------------------------------------*/
