@@ -1313,8 +1313,47 @@ h2 {
     display: none;
 }
 
+
+.coisasfac {
+    display: flex;
+
+    gap: 20px; 
+    justify-content: center; /* Centraliza o grupo na tela */
+    padding: 20px;
+}
+
+.ofcurso img{
+    height: 70px;
+    width: 180px;
+    border-radius: 4px;
+}
+
+.ofcurso {
+    max-width: 240px;
+    width: 90%;
+    height: 190px;
+    border: solid 2px rgb(143, 0, 74);
+    padding: 23px;
+    border-radius: 20px;
+    background-color: #fabec3;
+    transition: 0.5s;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+}
+
+.ofcurso:hover {
+    transform: scale(1.05);
+}
+
+.ofcurso p {
+    color: rgb(143, 0, 74);
+    text-decoration: none;
+}
+
+
 /*responsividade do sobre o curso ----------------------------------------*/
-@media (max-width: 610px) {
+@media (max-width: 741px) {
     .caracCurso {
         display: none;
     }
@@ -1339,8 +1378,22 @@ h2 {
         align-items: center;
         justify-content: center;
     }
-
 }
+
+@media (max-width: 747px) {
+    
+    .coisasfac {
+        flex-direction: column;
+        align-items: center;    
+    }
+
+    .ofcurso {
+        width: 100%;      
+        max-width: 300px;  
+        margin-bottom: 20px;
+    }
+}
+
 
 /*Contatos---------------------------------------------------------------------------------------------------------------------*/
 
