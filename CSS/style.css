@@ -1340,6 +1340,7 @@ h2 {
     margin: 0 auto;
     align-items: center;
     text-align: center;
+    box-shadow: 0px 5px 15px rgba(143, 0, 74, 0.3);
 }
 
 .ofcurso:hover {
